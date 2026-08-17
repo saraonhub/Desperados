@@ -1,0 +1,258 @@
+{
+  "type": "tileset",
+  "name": "Wooden floor for inside of bank(where game takes place) from top down angled per",
+  "tilewidth": 128,
+  "tileheight": 128,
+  "tilecount": 41,
+  "columns": 0,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "tiles/tile_0.png",
+      "imagewidth": 127,
+      "imageheight": 127
+    },
+    {
+      "id": 1,
+      "image": "tiles/tile_1.png",
+      "imagewidth": 127,
+      "imageheight": 128
+    },
+    {
+      "id": 2,
+      "image": "tiles/tile_2.png",
+      "imagewidth": 128,
+      "imageheight": 128
+    },
+    {
+      "id": 3,
+      "image": "tiles/tile_3.png",
+      "imagewidth": 60,
+      "imageheight": 127
+    },
+    {
+      "id": 4,
+      "image": "tiles/tile_4.png",
+      "imagewidth": 60,
+      "imageheight": 127
+    },
+    {
+      "id": 5,
+      "image": "tiles/tile_5.png",
+      "imagewidth": 127,
+      "imageheight": 127
+    },
+    {
+      "id": 6,
+      "image": "tiles/tile_6.png",
+      "imagewidth": 126,
+      "imageheight": 127
+    },
+    {
+      "id": 7,
+      "image": "tiles/tile_7.png",
+      "imagewidth": 128,
+      "imageheight": 128
+    },
+    {
+      "id": 8,
+      "image": "tiles/tile_8.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 9,
+      "image": "tiles/tile_9.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 10,
+      "image": "tiles/tile_10.png",
+      "imagewidth": 60,
+      "imageheight": 61
+    },
+    {
+      "id": 11,
+      "image": "tiles/tile_11.png",
+      "imagewidth": 61,
+      "imageheight": 60
+    },
+    {
+      "id": 12,
+      "image": "tiles/tile_12.png",
+      "imagewidth": 127,
+      "imageheight": 127
+    },
+    {
+      "id": 13,
+      "image": "tiles/tile_13.png",
+      "imagewidth": 61,
+      "imageheight": 61
+    },
+    {
+      "id": 14,
+      "image": "tiles/tile_14.png",
+      "imagewidth": 61,
+      "imageheight": 61
+    },
+    {
+      "id": 15,
+      "image": "tiles/tile_15.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 16,
+      "image": "tiles/tile_16.png",
+      "imagewidth": 26,
+      "imageheight": 40
+    },
+    {
+      "id": 17,
+      "image": "tiles/tile_17.png",
+      "imagewidth": 36,
+      "imageheight": 42
+    },
+    {
+      "id": 18,
+      "image": "tiles/tile_18.png",
+      "imagewidth": 37,
+      "imageheight": 42
+    },
+    {
+      "id": 19,
+      "image": "tiles/tile_19.png",
+      "imagewidth": 61,
+      "imageheight": 60
+    },
+    {
+      "id": 20,
+      "image": "tiles/tile_20.png",
+      "imagewidth": 61,
+      "imageheight": 61
+    },
+    {
+      "id": 21,
+      "image": "tiles/tile_21.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 22,
+      "image": "tiles/tile_22.png",
+      "imagewidth": 37,
+      "imageheight": 41
+    },
+    {
+      "id": 23,
+      "image": "tiles/tile_23.png",
+      "imagewidth": 35,
+      "imageheight": 40
+    },
+    {
+      "id": 24,
+      "image": "tiles/tile_24.png",
+      "imagewidth": 23,
+      "imageheight": 39
+    },
+    {
+      "id": 25,
+      "image": "tiles/tile_25.png",
+      "imagewidth": 61,
+      "imageheight": 39
+    },
+    {
+      "id": 26,
+      "image": "tiles/tile_26.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 27,
+      "image": "tiles/tile_27.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 28,
+      "image": "tiles/tile_28.png",
+      "imagewidth": 60,
+      "imageheight": 61
+    },
+    {
+      "id": 29,
+      "image": "tiles/tile_29.png",
+      "imagewidth": 60,
+      "imageheight": 61
+    },
+    {
+      "id": 30,
+      "image": "tiles/tile_30.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 31,
+      "image": "tiles/tile_31.png",
+      "imagewidth": 59,
+      "imageheight": 60
+    },
+    {
+      "id": 32,
+      "image": "tiles/tile_32.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 33,
+      "image": "tiles/tile_33.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 34,
+      "image": "tiles/tile_34.png",
+      "imagewidth": 34,
+      "imageheight": 61
+    },
+    {
+      "id": 35,
+      "image": "tiles/tile_35.png",
+      "imagewidth": 60,
+      "imageheight": 61
+    },
+    {
+      "id": 36,
+      "image": "tiles/tile_36.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 37,
+      "image": "tiles/tile_37.png",
+      "imagewidth": 60,
+      "imageheight": 60
+    },
+    {
+      "id": 38,
+      "image": "tiles/tile_38.png",
+      "imagewidth": 60,
+      "imageheight": 61
+    },
+    {
+      "id": 39,
+      "image": "tiles/tile_39.png",
+      "imagewidth": 59,
+      "imageheight": 61
+    },
+    {
+      "id": 40,
+      "image": "tiles/tile_40.png",
+      "imagewidth": 59,
+      "imageheight": 60
+    }
+  ],
+  "tiledversion": "1.11",
+  "version": "1.6"
+}

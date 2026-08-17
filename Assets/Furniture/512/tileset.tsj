@@ -1,0 +1,198 @@
+{
+  "type": "tileset",
+  "name": "Wild west bank furniture from top down but angled perspective!",
+  "tilewidth": 512,
+  "tileheight": 377,
+  "tilecount": 31,
+  "columns": 0,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "tiles/tile_0.png",
+      "imagewidth": 185,
+      "imageheight": 188
+    },
+    {
+      "id": 1,
+      "image": "tiles/tile_1.png",
+      "imagewidth": 185,
+      "imageheight": 188
+    },
+    {
+      "id": 2,
+      "image": "tiles/tile_2.png",
+      "imagewidth": 187,
+      "imageheight": 185
+    },
+    {
+      "id": 3,
+      "image": "tiles/tile_3.png",
+      "imagewidth": 139,
+      "imageheight": 128
+    },
+    {
+      "id": 4,
+      "image": "tiles/tile_4.png",
+      "imagewidth": 284,
+      "imageheight": 125
+    },
+    {
+      "id": 5,
+      "image": "tiles/tile_5.png",
+      "imagewidth": 136,
+      "imageheight": 128
+    },
+    {
+      "id": 6,
+      "image": "tiles/tile_6.png",
+      "imagewidth": 136,
+      "imageheight": 299
+    },
+    {
+      "id": 7,
+      "image": "tiles/tile_7.png",
+      "imagewidth": 131,
+      "imageheight": 140
+    },
+    {
+      "id": 8,
+      "image": "tiles/tile_8.png",
+      "imagewidth": 130,
+      "imageheight": 139
+    },
+    {
+      "id": 9,
+      "image": "tiles/tile_9.png",
+      "imagewidth": 133,
+      "imageheight": 298
+    },
+    {
+      "id": 10,
+      "image": "tiles/tile_10.png",
+      "imagewidth": 185,
+      "imageheight": 185
+    },
+    {
+      "id": 11,
+      "image": "tiles/tile_11.png",
+      "imagewidth": 188,
+      "imageheight": 183
+    },
+    {
+      "id": 12,
+      "image": "tiles/tile_12.png",
+      "imagewidth": 185,
+      "imageheight": 185
+    },
+    {
+      "id": 13,
+      "image": "tiles/tile_13.png",
+      "imagewidth": 132,
+      "imageheight": 139
+    },
+    {
+      "id": 14,
+      "image": "tiles/tile_14.png",
+      "imagewidth": 130,
+      "imageheight": 139
+    },
+    {
+      "id": 15,
+      "image": "tiles/tile_15.png",
+      "imagewidth": 512,
+      "imageheight": 301
+    },
+    {
+      "id": 16,
+      "image": "tiles/tile_16.png",
+      "imagewidth": 139,
+      "imageheight": 134
+    },
+    {
+      "id": 17,
+      "image": "tiles/tile_17.png",
+      "imagewidth": 283,
+      "imageheight": 131
+    },
+    {
+      "id": 18,
+      "image": "tiles/tile_18.png",
+      "imagewidth": 136,
+      "imageheight": 134
+    },
+    {
+      "id": 19,
+      "image": "tiles/tile_19.png",
+      "imagewidth": 221,
+      "imageheight": 377
+    },
+    {
+      "id": 20,
+      "image": "tiles/tile_20.png",
+      "imagewidth": 374,
+      "imageheight": 184
+    },
+    {
+      "id": 21,
+      "image": "tiles/tile_21.png",
+      "imagewidth": 356,
+      "imageheight": 225
+    },
+    {
+      "id": 22,
+      "image": "tiles/tile_22.png",
+      "imagewidth": 374,
+      "imageheight": 185
+    },
+    {
+      "id": 23,
+      "image": "tiles/tile_23.png",
+      "imagewidth": 141,
+      "imageheight": 187
+    },
+    {
+      "id": 24,
+      "image": "tiles/tile_24.png",
+      "imagewidth": 121,
+      "imageheight": 190
+    },
+    {
+      "id": 25,
+      "image": "tiles/tile_25.png",
+      "imagewidth": 106,
+      "imageheight": 92
+    },
+    {
+      "id": 26,
+      "image": "tiles/tile_26.png",
+      "imagewidth": 191,
+      "imageheight": 189
+    },
+    {
+      "id": 27,
+      "image": "tiles/tile_27.png",
+      "imagewidth": 190,
+      "imageheight": 189
+    },
+    {
+      "id": 28,
+      "image": "tiles/tile_28.png",
+      "imagewidth": 153,
+      "imageheight": 102
+    },
+    {
+      "id": 29,
+      "image": "tiles/tile_29.png",
+      "imagewidth": 65,
+      "imageheight": 118
+    },
+    {
+      "id": 30,
+      "image": "tiles/tile_30.png",
+      "imagewidth": 106,
+      "imageheight": 85
+    }
+  ],
+  "tiledversion": "1.11",
+  "version": "1.6"
+}

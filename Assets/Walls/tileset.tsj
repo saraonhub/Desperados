@@ -1,0 +1,348 @@
+{
+  "type": "tileset",
+  "name": "Walls for bank",
+  "tilewidth": 495,
+  "tileheight": 500,
+  "tilecount": 56,
+  "columns": 0,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "tiles/tile_0.png",
+      "imagewidth": 490,
+      "imageheight": 490
+    },
+    {
+      "id": 1,
+      "image": "tiles/tile_1.png",
+      "imagewidth": 495,
+      "imageheight": 500
+    },
+    {
+      "id": 2,
+      "image": "tiles/tile_2.png",
+      "imagewidth": 242,
+      "imageheight": 243
+    },
+    {
+      "id": 3,
+      "image": "tiles/tile_3.png",
+      "imagewidth": 244,
+      "imageheight": 208
+    },
+    {
+      "id": 4,
+      "image": "tiles/tile_4.png",
+      "imagewidth": 244,
+      "imageheight": 208
+    },
+    {
+      "id": 5,
+      "image": "tiles/tile_5.png",
+      "imagewidth": 243,
+      "imageheight": 243
+    },
+    {
+      "id": 6,
+      "image": "tiles/tile_6.png",
+      "imagewidth": 135,
+      "imageheight": 244
+    },
+    {
+      "id": 7,
+      "image": "tiles/tile_7.png",
+      "imagewidth": 244,
+      "imageheight": 207
+    },
+    {
+      "id": 8,
+      "image": "tiles/tile_8.png",
+      "imagewidth": 135,
+      "imageheight": 244
+    },
+    {
+      "id": 9,
+      "image": "tiles/tile_9.png",
+      "imagewidth": 227,
+      "imageheight": 159
+    },
+    {
+      "id": 10,
+      "image": "tiles/tile_10.png",
+      "imagewidth": 490,
+      "imageheight": 490
+    },
+    {
+      "id": 11,
+      "image": "tiles/tile_11.png",
+      "imagewidth": 490,
+      "imageheight": 490
+    },
+    {
+      "id": 12,
+      "image": "tiles/tile_12.png",
+      "imagewidth": 132,
+      "imageheight": 244
+    },
+    {
+      "id": 13,
+      "image": "tiles/tile_13.png",
+      "imagewidth": 225,
+      "imageheight": 232
+    },
+    {
+      "id": 14,
+      "image": "tiles/tile_14.png",
+      "imagewidth": 221,
+      "imageheight": 217
+    },
+    {
+      "id": 15,
+      "image": "tiles/tile_15.png",
+      "imagewidth": 132,
+      "imageheight": 244
+    },
+    {
+      "id": 16,
+      "image": "tiles/tile_16.png",
+      "imagewidth": 239,
+      "imageheight": 239
+    },
+    {
+      "id": 17,
+      "image": "tiles/tile_17.png",
+      "imagewidth": 103,
+      "imageheight": 84
+    },
+    {
+      "id": 18,
+      "image": "tiles/tile_18.png",
+      "imagewidth": 216,
+      "imageheight": 211
+    },
+    {
+      "id": 19,
+      "image": "tiles/tile_19.png",
+      "imagewidth": 239,
+      "imageheight": 239
+    },
+    {
+      "id": 20,
+      "image": "tiles/tile_20.png",
+      "imagewidth": 89,
+      "imageheight": 71
+    },
+    {
+      "id": 21,
+      "image": "tiles/tile_21.png",
+      "imagewidth": 490,
+      "imageheight": 490
+    },
+    {
+      "id": 22,
+      "image": "tiles/tile_22.png",
+      "imagewidth": 239,
+      "imageheight": 240
+    },
+    {
+      "id": 23,
+      "image": "tiles/tile_23.png",
+      "imagewidth": 244,
+      "imageheight": 206
+    },
+    {
+      "id": 24,
+      "image": "tiles/tile_24.png",
+      "imagewidth": 220,
+      "imageheight": 210
+    },
+    {
+      "id": 25,
+      "image": "tiles/tile_25.png",
+      "imagewidth": 225,
+      "imageheight": 212
+    },
+    {
+      "id": 26,
+      "image": "tiles/tile_26.png",
+      "imagewidth": 218,
+      "imageheight": 224
+    },
+    {
+      "id": 27,
+      "image": "tiles/tile_27.png",
+      "imagewidth": 191,
+      "imageheight": 216
+    },
+    {
+      "id": 28,
+      "image": "tiles/tile_28.png",
+      "imagewidth": 218,
+      "imageheight": 243
+    },
+    {
+      "id": 29,
+      "image": "tiles/tile_29.png",
+      "imagewidth": 234,
+      "imageheight": 236
+    },
+    {
+      "id": 30,
+      "image": "tiles/tile_30.png",
+      "imagewidth": 234,
+      "imageheight": 236
+    },
+    {
+      "id": 31,
+      "image": "tiles/tile_31.png",
+      "imagewidth": 234,
+      "imageheight": 236
+    },
+    {
+      "id": 32,
+      "image": "tiles/tile_32.png",
+      "imagewidth": 234,
+      "imageheight": 236
+    },
+    {
+      "id": 33,
+      "image": "tiles/tile_33.png",
+      "imagewidth": 95,
+      "imageheight": 183
+    },
+    {
+      "id": 34,
+      "image": "tiles/tile_34.png",
+      "imagewidth": 95,
+      "imageheight": 134
+    },
+    {
+      "id": 35,
+      "image": "tiles/tile_35.png",
+      "imagewidth": 490,
+      "imageheight": 489
+    },
+    {
+      "id": 36,
+      "image": "tiles/tile_36.png",
+      "imagewidth": 155,
+      "imageheight": 216
+    },
+    {
+      "id": 37,
+      "image": "tiles/tile_37.png",
+      "imagewidth": 158,
+      "imageheight": 227
+    },
+    {
+      "id": 38,
+      "image": "tiles/tile_38.png",
+      "imagewidth": 234,
+      "imageheight": 233
+    },
+    {
+      "id": 39,
+      "image": "tiles/tile_39.png",
+      "imagewidth": 234,
+      "imageheight": 233
+    },
+    {
+      "id": 40,
+      "image": "tiles/tile_40.png",
+      "imagewidth": 72,
+      "imageheight": 127
+    },
+    {
+      "id": 41,
+      "image": "tiles/tile_41.png",
+      "imagewidth": 87,
+      "imageheight": 155
+    },
+    {
+      "id": 42,
+      "image": "tiles/tile_42.png",
+      "imagewidth": 67,
+      "imageheight": 76
+    },
+    {
+      "id": 43,
+      "image": "tiles/tile_43.png",
+      "imagewidth": 64,
+      "imageheight": 63
+    },
+    {
+      "id": 44,
+      "image": "tiles/tile_44.png",
+      "imagewidth": 25,
+      "imageheight": 39
+    },
+    {
+      "id": 45,
+      "image": "tiles/tile_45.png",
+      "imagewidth": 56,
+      "imageheight": 54
+    },
+    {
+      "id": 46,
+      "image": "tiles/tile_46.png",
+      "imagewidth": 150,
+      "imageheight": 186
+    },
+    {
+      "id": 47,
+      "image": "tiles/tile_47.png",
+      "imagewidth": 153,
+      "imageheight": 177
+    },
+    {
+      "id": 48,
+      "image": "tiles/tile_48.png",
+      "imagewidth": 234,
+      "imageheight": 233
+    },
+    {
+      "id": 49,
+      "image": "tiles/tile_49.png",
+      "imagewidth": 111,
+      "imageheight": 145
+    },
+    {
+      "id": 50,
+      "image": "tiles/tile_50.png",
+      "imagewidth": 27,
+      "imageheight": 68
+    },
+    {
+      "id": 51,
+      "image": "tiles/tile_51.png",
+      "imagewidth": 53,
+      "imageheight": 38
+    },
+    {
+      "id": 52,
+      "image": "tiles/tile_52.png",
+      "imagewidth": 62,
+      "imageheight": 80
+    },
+    {
+      "id": 53,
+      "image": "tiles/tile_53.png",
+      "imagewidth": 56,
+      "imageheight": 39
+    },
+    {
+      "id": 54,
+      "image": "tiles/tile_54.png",
+      "imagewidth": 56,
+      "imageheight": 57
+    },
+    {
+      "id": 55,
+      "image": "tiles/tile_55.png",
+      "imagewidth": 57,
+      "imageheight": 38
+    }
+  ],
+  "tiledversion": "1.11",
+  "version": "1.6"
+}
