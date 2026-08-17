@@ -8,6 +8,9 @@ public class Shooting : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
     [SerializeField] InputActionReference shootInput;
+    [SerializeField] GameObject muzzleFlash;
+    [SerializeField] Transform muzzle;
+
     Vector2 direction;
 
     int magazine = 6;
@@ -61,9 +64,10 @@ public class Shooting : MonoBehaviour
         {
             GameObject newBullet = Instantiate(
                 bullet,
-                transform.position + (Vector3)direction.normalized,
+                muzzle.position + (Vector3)direction.normalized,
                 Quaternion.identity
             );
+            StartCoroutine(ShowMuzzleFlash());
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
             bulletScript.SetDirection(direction);
@@ -81,6 +85,13 @@ public class Shooting : MonoBehaviour
         currentAmmo = magazine;
         isReloading = false;
 
+    }
+
+    IEnumerator ShowMuzzleFlash()
+    {
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(0.05f);
+        muzzleFlash.SetActive(false);
     }
 
 
