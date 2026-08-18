@@ -456,7 +456,7 @@ Animator:
   m_GameObject: {fileID: 154108361}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0711da0c17008426180149e89656e68a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 129a35340ca3f4914aa501af79853b82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -522,7 +522,8 @@ MonoBehaviour:
   enemyMuzzele: {fileID: 1733011104}
   enemyBullet: {fileID: 6838601976727374028, guid: 73c9c12a4cd144b5c95f9f484004fcea, type: 3}
   enemyMuzzleFlash: {fileID: 997667616}
-  shootDelay: 2
+  shootDelay: 3
+  startDelay: 3.5
 --- !u!114 &154108365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +704,7 @@ Animator:
   m_GameObject: {fileID: 276008246}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0711da0c17008426180149e89656e68a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9f94806e7a6b2477a89f340256c75052, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -769,7 +770,8 @@ MonoBehaviour:
   enemyMuzzele: {fileID: 100484762}
   enemyBullet: {fileID: 6838601976727374028, guid: 73c9c12a4cd144b5c95f9f484004fcea, type: 3}
   enemyMuzzleFlash: {fileID: 1474076308}
-  shootDelay: 2
+  shootDelay: 2.5
+  startDelay: 2.5
 --- !u!114 &276008250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,8 +1644,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1392266805
-  m_SortingLayer: 2
+  m_SortingLayerID: -1458113485
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -148617073940163930, guid: 02fa35d5cadd54a9eb62c6f227cd0124, type: 3}
@@ -2530,7 +2532,7 @@ GameObject:
   - component: {fileID: 687795234}
   - component: {fileID: 687795233}
   m_Layer: 0
-  m_Name: Deputy_03 (1)
+  m_Name: BountyHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2546,7 +2548,7 @@ Animator:
   m_GameObject: {fileID: 687795232}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0711da0c17008426180149e89656e68a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 22f898b817d1c46e19d3c03fdcf58283, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2613,6 +2615,7 @@ MonoBehaviour:
   enemyBullet: {fileID: 6838601976727374028, guid: 73c9c12a4cd144b5c95f9f484004fcea, type: 3}
   enemyMuzzleFlash: {fileID: 333407966}
   shootDelay: 2
+  startDelay: 2
 --- !u!114 &687795236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2625,7 +2628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1866f4d6aba643fc9fc128ab3263080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  health: 3
+  health: 4
   animator: {fileID: 687795233}
 --- !u!50 &687795237
 Rigidbody2D:
@@ -2830,7 +2833,6 @@ GameObject:
   m_Component:
   - component: {fileID: 882719307}
   - component: {fileID: 882719308}
-  - component: {fileID: 882719309}
   m_Layer: 0
   m_Name: tile_15_0 (1)
   m_TagString: Untagged
@@ -2912,27 +2914,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!65 &882719309
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882719306}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.56, y: 5.04, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &906433342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906433344}
   - component: {fileID: 906433343}
+  - component: {fileID: 906433345}
   m_Layer: 0
   m_Name: Sofa
   m_TagString: Untagged
@@ -3017,13 +2999,59 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906433342}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.08, y: 0.55, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &906433345
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906433342}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.5781431}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.25, y: 3.08}
+    newSize: {x: 6.25, y: 3.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.25, y: 1.4437137}
+  m_EdgeRadius: 0
 --- !u!1 &952075767
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3687,7 @@ Animator:
   m_GameObject: {fileID: 1051506478}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0711da0c17008426180149e89656e68a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 465b75d8c86324c91911912b6a2e8e37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3725,7 +3753,8 @@ MonoBehaviour:
   enemyMuzzele: {fileID: 1165917871}
   enemyBullet: {fileID: 6838601976727374028, guid: 73c9c12a4cd144b5c95f9f484004fcea, type: 3}
   enemyMuzzleFlash: {fileID: 472210365}
-  shootDelay: 2
+  shootDelay: 2.5
+  startDelay: 1.5
 --- !u!114 &1051506482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3738,7 +3767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1866f4d6aba643fc9fc128ab3263080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  health: 3
+  health: 5
   animator: {fileID: 1051506479}
 --- !u!50 &1051506483
 Rigidbody2D:
@@ -3952,8 +3981,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -883478885
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4475447917555866148, guid: 035745aae73b644bc8487669f0e44f04, type: 3}
@@ -4212,7 +4241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236186232}
   - component: {fileID: 1236186231}
-  - component: {fileID: 1236186230}
+  - component: {fileID: 1236186233}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -4220,27 +4249,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1236186230
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236186229}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.96, y: 3.77, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1236186231
 SpriteRenderer:
   serializedVersion: 2
@@ -4286,8 +4294,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -883478885
-  m_SortingLayer: 1
+  m_SortingLayerID: 1392266805
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -13111798486741452, guid: d42bdd6420a5946e7b68bf3e31c75b4f, type: 3}
@@ -4315,6 +4323,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1236186233
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236186229}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.96, y: 3.77}
+    newSize: {x: 5.96, y: 3.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6, y: 2.6}
+  m_EdgeRadius: 0
 --- !u!1 &1274067109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,6 +4638,7 @@ MonoBehaviour:
   enemyBullet: {fileID: 6838601976727374028, guid: 73c9c12a4cd144b5c95f9f484004fcea, type: 3}
   enemyMuzzleFlash: {fileID: 1730941906}
   shootDelay: 2
+  startDelay: 3
 --- !u!70 &1302376664
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4835,7 +4890,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1373235575}
   - component: {fileID: 1373235576}
-  - component: {fileID: 1373235577}
   m_Layer: 0
   m_Name: tile_15_0 (2)
   m_TagString: Untagged
@@ -4917,27 +4971,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!65 &1373235577
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373235574}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.56, y: 5.04, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1380236189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,8 +5354,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1392266805
-  m_SortingLayer: 2
+  m_SortingLayerID: -1458113485
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2591076015198400291, guid: 2d12fa56d83d0485a9528bb2421849a1, type: 3}
@@ -6238,7 +6271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668713820}
   - component: {fileID: 1668713819}
-  - component: {fileID: 1668713818}
+  - component: {fileID: 1668713821}
   m_Layer: 0
   m_Name: Desk (1)
   m_TagString: Untagged
@@ -6246,27 +6279,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1668713818
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668713817}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.96, y: 3.77, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1668713819
 SpriteRenderer:
   serializedVersion: 2
@@ -6312,8 +6324,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -883478885
-  m_SortingLayer: 1
+  m_SortingLayerID: 1392266805
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -13111798486741452, guid: d42bdd6420a5946e7b68bf3e31c75b4f, type: 3}
@@ -6341,6 +6353,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1668713821
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668713817}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.173}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.96, y: 3.77}
+    newSize: {x: 5.96, y: 3.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.96, y: 2.6}
+  m_EdgeRadius: 0
 --- !u!1 &1730941906
 GameObject:
   m_ObjectHideFlags: 0
@@ -7302,7 +7360,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1975752047}
   - component: {fileID: 1975752048}
-  - component: {fileID: 1975752049}
   m_Layer: 0
   m_Name: tile_15_0
   m_TagString: Untagged
@@ -7384,27 +7441,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!65 &1975752049
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975752046}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.56, y: 5.04, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1977685555
 GameObject:
   m_ObjectHideFlags: 0
@@ -7790,8 +7826,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -883478885
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9086369338926393230, guid: f90b7566a220c4022910a23473ffb86e, type: 3}

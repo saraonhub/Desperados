@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -9,7 +10,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] GameObject enemyBullet;
     [SerializeField] GameObject enemyMuzzleFlash;
 
-    [SerializeField] float shootDelay = 2f;
+    [SerializeField] float shootDelay;
+    [SerializeField] float startDelay;
     void Start()
     {
         StartCoroutine(ShootRoutine());
@@ -40,7 +42,7 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator ShootRoutine()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(startDelay);
 
         while (true)
         {
