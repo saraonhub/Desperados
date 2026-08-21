@@ -10,19 +10,26 @@ public class Shooting : MonoBehaviour
     [SerializeField] InputActionReference shootInput;
     [SerializeField] GameObject muzzleFlash;
     [SerializeField] Transform muzzle;
+    [SerializeField] AmmoUI ammoUI;
 
     Vector2 direction;
 
     int magazine = 6;
-    float reloadTime = 2f;
     int currentAmmo;
+    int storage = 24; //added
+    float reloadTime = 2f;
+
     bool isReloading;
+
+    public int CurrentAmmo => currentAmmo;
+    public int Storage => storage;
 
 
     void Start()
     {
         currentAmmo = magazine;
     }
+
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
@@ -31,6 +38,7 @@ public class Shooting : MonoBehaviour
 
         direction = mousePosition - transform.position;
     }
+
     void OnEnable()
     {
         if (shootInput != null)
@@ -49,16 +57,18 @@ public class Shooting : MonoBehaviour
         }
     }
 
-
-
-
     void OnKeyTriggered(InputAction.CallbackContext context)
     {
         if (isReloading) return;
 
         if (currentAmmo <= 0)
         {
-            StartCoroutine(Reload());
+
+            if (storage > 0)
+                StartCoroutine(Reload());
+
+            else
+                Debug.Log("EMPTY");
         }
         else
         {
@@ -73,6 +83,8 @@ public class Shooting : MonoBehaviour
             bulletScript.SetDirection(direction);
 
             currentAmmo--;
+            ammoUI.UpdateAmmo();
+
         }
 
     }
@@ -82,7 +94,11 @@ public class Shooting : MonoBehaviour
         isReloading = true;
         yield return new WaitForSeconds(reloadTime);
 
-        currentAmmo = magazine;
+        int bulletsToReload = Mathf.Min(storage, magazine);
+
+        currentAmmo = bulletsToReload;
+        storage -= bulletsToReload;
+        ammoUI.UpdateAmmo();
         isReloading = false;
 
     }

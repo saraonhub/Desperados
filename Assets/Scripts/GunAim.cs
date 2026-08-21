@@ -11,7 +11,7 @@ public class GunAim : MonoBehaviour
 
         Vector3 rotation = transform.localEulerAngles;
 
-        if (mousePosition.x < 0)
+        if (mousePosition.x < transform.position.x)
         {
             rotation.y = 180f;
         }

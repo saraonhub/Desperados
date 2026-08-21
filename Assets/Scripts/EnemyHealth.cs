@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("BANG");
             health--;
             Destroy(collision.gameObject);
 
