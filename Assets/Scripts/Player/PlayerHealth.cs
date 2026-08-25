@@ -1,20 +1,20 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
-
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int health;
+    [SerializeField] int health = 7;
     [SerializeField] Animator animator;
-
+    [SerializeField] HealthUI healthUI;
+    public int CurrentHealth => health;
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            Debug.Log("BANG");
             health--;
-            Destroy(collision.gameObject);
-
+            healthUI.UpdateHealth();
+            Debug.Log("Cora health: " + health);
             if (health <= 0)
             {
                 animator.SetBool("Die", true);
@@ -27,8 +27,5 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-
-
     }
-
 }

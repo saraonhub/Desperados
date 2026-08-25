@@ -14,7 +14,7 @@ public class HealthUI : MonoBehaviour
     }
     public void UpdateHealth()
     {
-        healthBar.fillAmount = playerHealth.CurrentHealth / 5f;
+        healthBar.fillAmount = playerHealth.CurrentHealth / 7f;
         ShowDamage();
     }
 

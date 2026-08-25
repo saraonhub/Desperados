@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
+    [SerializeField] float speed = 50f;
     [SerializeField] Rigidbody2D rb;
     Vector2 direction;
 
     public void SetDirection(Vector2 dir)
     {
-        direction = dir;
+        direction = dir.normalized;
         rb.linearVelocity = direction * speed;
     }
 

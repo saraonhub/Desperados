@@ -16,15 +16,14 @@ public class Shooting : MonoBehaviour
 
     int magazine = 6;
     int currentAmmo;
-    int storage = 24; //added
+    int storage = 24;
     float reloadTime = 2f;
 
     bool isReloading;
 
+    // properties 
     public int CurrentAmmo => currentAmmo;
     public int Storage => storage;
-
-
     void Start()
     {
         currentAmmo = magazine;
@@ -61,7 +60,7 @@ public class Shooting : MonoBehaviour
     {
         if (isReloading) return;
 
-        if (currentAmmo <= 0)
+        if (currentAmmo < 1)
         {
 
             if (storage > 0)
@@ -87,6 +86,12 @@ public class Shooting : MonoBehaviour
 
         }
 
+    }
+
+    public void AddAmmo(int ammount)
+    {
+        storage += ammount;
+        ammoUI.UpdateAmmo();
     }
 
     IEnumerator Reload()

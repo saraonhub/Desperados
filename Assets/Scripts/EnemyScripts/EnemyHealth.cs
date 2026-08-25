@@ -1,24 +1,26 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+
+public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] int health = 5;
+    [SerializeField] int health;
     [SerializeField] Animator animator;
-    [SerializeField] HealthUI healthUI;
-    public int CurrentHealth => health;
+    [SerializeField] EnemyManager enemyManager;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyBullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("BANG");
             health--;
-            healthUI.UpdateHealth();
-            Debug.Log("Cora health: " + health);
+            Destroy(collision.gameObject);
+
             if (health <= 0)
             {
                 animator.SetBool("Die", true);
                 StartCoroutine(DeathRoutine());
+                enemyManager.EnemyDied();
             }
         }
     }
@@ -27,5 +29,8 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+
+
     }
+
 }
