@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectiveUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI objective;
+    public bool objective2Active = false;
 
     public void Objective1Completed()
     {
@@ -16,6 +17,7 @@ public class ObjectiveUI : MonoBehaviour
     {
         objective.fontStyle = FontStyles.Normal;
         objective.text = "Loot the safe";
+        objective2Active = true;
     }
 
     public void Objective2Completed()

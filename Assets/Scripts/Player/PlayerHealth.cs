@@ -14,7 +14,6 @@ public class PlayerHealth : MonoBehaviour
         {
             health--;
             healthUI.UpdateHealth();
-            Debug.Log("Cora health: " + health);
             if (health <= 0)
             {
                 animator.SetBool("Die", true);

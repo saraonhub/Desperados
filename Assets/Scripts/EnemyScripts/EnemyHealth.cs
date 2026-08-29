@@ -12,7 +12,6 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("BANG");
             health--;
             Destroy(collision.gameObject);
 
@@ -20,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 animator.SetBool("Die", true);
                 StartCoroutine(DeathRoutine());
-                enemyManager.EnemyDied();
+
             }
         }
     }
@@ -29,6 +28,8 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        enemyManager.EnemyDied();
+
 
 
     }

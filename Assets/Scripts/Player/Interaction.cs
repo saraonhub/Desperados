@@ -37,11 +37,25 @@ public class Interaction : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         currentInteractable = collision.GetComponent<IInteractable>();
-        //Debug.Log(currentInteractable);
+        if (currentInteractable != null)
+        {
+            currentInteractable.Highlight();
+
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        currentInteractable = null;
+        IInteractable interactable = collision.GetComponent<IInteractable>();
+
+        if (interactable != null)
+        {
+            interactable.HideHighlight();
+
+            if (interactable == currentInteractable)
+            {
+                currentInteractable = null;
+            }
+        }
     }
 }

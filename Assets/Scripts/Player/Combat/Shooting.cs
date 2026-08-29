@@ -3,6 +3,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Shooting : MonoBehaviour
 {
@@ -91,7 +92,7 @@ public class Shooting : MonoBehaviour
     public void AddAmmo(int ammount)
     {
         storage += ammount;
-        ammoUI.UpdateAmmo();
+        ammoUI.AddAmmoUI();
     }
 
     IEnumerator Reload()
