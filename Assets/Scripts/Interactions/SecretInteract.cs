@@ -2,12 +2,14 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SafeInteract : MonoBehaviour, IInteractable
+public class SecretInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject glow;
-    [SerializeField] GameObject dialogue;
     [SerializeField] ObjectiveUI objectiveUI;
-    [SerializeField] GameObject dollarSign;
+    [SerializeField] GameObject dialogue;
+    [SerializeField] Animator secretUIPopup;
+
+
     void IInteractable.Interact()
     {
         if (!objectiveUI.objective2Active)
@@ -17,34 +19,27 @@ public class SafeInteract : MonoBehaviour, IInteractable
         }
         else
         {
-            LootSafe();
+            Pickup();
         }
     }
 
+
+    public void Pickup()
+    {
+        glow.SetActive(false);
+        UIManager.Instance.SecretOpen(secretUIPopup);
+    }
     void IInteractable.Highlight()
     {
         glow.SetActive(true);
     }
-
     void IInteractable.HideHighlight()
     {
         glow.SetActive(false);
     }
-
-    void LootSafe()
-    {
-        dollarSign.SetActive(true);
-        UIManager.Instance.Completed();
-        Debug.Log("MONEEEEY");
-    }
-
     IEnumerator DialougePopup()
     {
         yield return new WaitForSeconds(2.35f);
         dialogue.SetActive(false);
     }
-
-
-
-
 }

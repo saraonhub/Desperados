@@ -10,7 +10,7 @@ public class AmmoUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI refill;
 
     [SerializeField] Shooting shooting;
-
+    public GameObject reloading;
     void Start()
     {
         refill.enabled = false;

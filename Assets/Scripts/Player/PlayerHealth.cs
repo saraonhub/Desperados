@@ -25,6 +25,9 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator DeathRoutine()
     {
         yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        Time.timeScale = 0f;
+        UIManager.Instance.FailedScreen();
+
     }
 }

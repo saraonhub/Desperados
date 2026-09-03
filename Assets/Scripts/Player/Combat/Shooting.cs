@@ -98,6 +98,7 @@ public class Shooting : MonoBehaviour
     IEnumerator Reload()
     {
         isReloading = true;
+        ammoUI.reloading.SetActive(true);
         yield return new WaitForSeconds(reloadTime);
 
         int bulletsToReload = Mathf.Min(storage, magazine);
@@ -105,6 +106,7 @@ public class Shooting : MonoBehaviour
         currentAmmo = bulletsToReload;
         storage -= bulletsToReload;
         ammoUI.UpdateAmmo();
+        ammoUI.reloading.SetActive(false);
         isReloading = false;
 
     }
