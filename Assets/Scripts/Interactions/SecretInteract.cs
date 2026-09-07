@@ -8,6 +8,8 @@ public class SecretInteract : MonoBehaviour, IInteractable
     [SerializeField] ObjectiveUI objectiveUI;
     [SerializeField] GameObject dialogue;
     [SerializeField] Animator secretUIPopup;
+    bool pickedup;
+
 
 
     void IInteractable.Interact()
@@ -26,6 +28,9 @@ public class SecretInteract : MonoBehaviour, IInteractable
 
     public void Pickup()
     {
+        if (!pickedup)
+            pickedup = true;
+        GameManager.Instance.SecretFound();
         glow.SetActive(false);
         UIManager.Instance.SecretOpen(secretUIPopup);
     }

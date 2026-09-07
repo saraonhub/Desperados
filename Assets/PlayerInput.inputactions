@@ -161,6 +161,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Title",
+            "id": "8160a28a-b761-4231-aa2e-d5d23d01ea37",
+            "actions": [
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "ab95e002-3c76-4ba1-acd4-7cbdb773b28e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5082ad99-4e45-4d44-a70a-5ece7eaf5c47",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

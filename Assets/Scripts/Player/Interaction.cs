@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 
 public class Interaction : MonoBehaviour
 {
     [SerializeField] InputActionReference interactInput;
+
     IInteractable currentInteractable;
 
     void OnEnable()
@@ -26,21 +25,36 @@ public class Interaction : MonoBehaviour
         }
     }
 
-    private void OnKeyTriggered(InputAction.CallbackContext context)
+    void OnKeyTriggered(InputAction.CallbackContext context)
     {
+        Debug.Log("CLICKED E");
+
         if (currentInteractable != null)
         {
+            Debug.Log("INTERACTED WITH: " + currentInteractable);
             currentInteractable.Interact();
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        currentInteractable = collision.GetComponent<IInteractable>();
-        if (currentInteractable != null)
-        {
-            currentInteractable.Highlight();
+        IInteractable interactable = collision.GetComponent<IInteractable>();
 
+        if (interactable != null)
+        {
+            currentInteractable = interactable;
+            interactable.Highlight();
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        IInteractable interactable = collision.GetComponent<IInteractable>();
+
+        if (interactable != null)
+        {
+            currentInteractable = interactable;
+            interactable.Highlight();
         }
     }
 

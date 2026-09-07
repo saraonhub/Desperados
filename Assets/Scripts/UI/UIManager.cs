@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     {
         completed.SetActive(true);
         seceretsFoundText.text = GameManager.Instance.GetSecertsFound().ToString() + "/3";
+        GameManager.Instance.EndGameplay();
     }
     public void FailedScreen()
     {
