@@ -7,13 +7,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] InputActionReference moveInput;
     [SerializeField] Animator playerAnimator;
+    [SerializeField] PlayerInput playerInput;
+
 
     private Vector2 moveVector;
-
     void Start()
     {
-        moveInput.action.Enable();
+        playerInput.SwitchCurrentActionMap("UI");
     }
+
     void Update()
     {
         moveVector = moveInput.action.ReadValue<Vector2>().normalized;

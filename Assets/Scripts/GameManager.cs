@@ -2,12 +2,22 @@ using System.Collections;
 using Unity.VectorGraphics;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [SerializeField] AudioSource UIsound;
+    // [SerializeField] PlayerInput playerInput;
     int secretsFound = 0;
+
+    void Start()
+    {
+        // playerInput.SwitchCurrentActionMap("UI");
+        PauseGame();
+
+    }
 
     void Awake()
     {
@@ -23,16 +33,23 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("QUIT METHOD");
-
+        UIsound.Play();
         Application.Quit();
     }
 
     public void ReloadGame()
     {
+        UIsound.Play();
+        StartCoroutine(ReloadRoutine());
+
+    }
+    IEnumerator ReloadRoutine()
+    {
+        Debug.Log("routine start");
+        yield return new WaitForSecondsRealtime(1f);
+        Debug.Log("this never happens");
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        UIManager.Instance.DeactivateUIMap();
+        SceneManager.LoadScene(2);
     }
 
     public void SecretFound()
@@ -58,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartGameLoading()
     {
+        UIsound.Play();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(1);
     }
@@ -70,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartCreditsLoading()
     {
+        UIsound.Play();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(4);
     }
@@ -77,7 +96,6 @@ public class GameManager : MonoBehaviour
     public void Credits()
     {
         StartCoroutine(StartCreditsLoading());
-
     }
 
     public void StartGameplay(int nextSceneIndex)
@@ -89,5 +107,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(3);
+    }
+
+    public void OpenLink(string link)
+    {
+        Application.OpenURL(link);
     }
 }

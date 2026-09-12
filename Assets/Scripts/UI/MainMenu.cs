@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Animator buttonStartAnimator;
     [SerializeField] Animator buttonQuitAnimator;
     [SerializeField] Animator buttonCreditsAnimator;
+    [SerializeField] AudioSource buttonSound;
 
     void OnEnable()
     {
@@ -35,6 +37,8 @@ public class MainMenu : MonoBehaviour
     void OnKeyTriggered(InputAction.CallbackContext context)
     {
         TextChange();
+        buttonSound.Play();
+
     }
 
     void TextChange()
@@ -44,9 +48,9 @@ public class MainMenu : MonoBehaviour
 
 
     }
-
     IEnumerator Loading()
     {
+        GameManager.Instance.ResumeGame();
         yield return new WaitForSeconds(3f);
         LoadMenu();
     }
@@ -59,7 +63,6 @@ public class MainMenu : MonoBehaviour
         buttonStartAnimator.SetTrigger("Start");
         buttonQuitAnimator.SetTrigger("Start");
         buttonCreditsAnimator.SetTrigger("Start");
-
 
     }
 }

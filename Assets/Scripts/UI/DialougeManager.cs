@@ -10,8 +10,6 @@ public class DialougeManager : MonoBehaviour
     float delay = 4f;
     int current = 0;
 
-
-
     void Start()
     {
         StartCoroutine(DialougeRoutine());
@@ -19,6 +17,7 @@ public class DialougeManager : MonoBehaviour
 
     IEnumerator DialougeRoutine()
     {
+        GameManager.Instance.ResumeGame();
         for (current = 0; current < array.Length; current++)
         {
             array[current].SetActive(true);

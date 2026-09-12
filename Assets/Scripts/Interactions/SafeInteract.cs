@@ -8,6 +8,7 @@ public class SafeInteract : MonoBehaviour, IInteractable
     [SerializeField] GameObject dialogue;
     [SerializeField] ObjectiveUI objectiveUI;
     [SerializeField] GameObject dollarSign;
+    [SerializeField] AudioSource collectSound;
     void IInteractable.Interact()
     {
         if (!objectiveUI.objective2Active)
@@ -34,8 +35,8 @@ public class SafeInteract : MonoBehaviour, IInteractable
     void LootSafe()
     {
         dollarSign.SetActive(true);
+        collectSound.Play();
         UIManager.Instance.Completed();
-        Debug.Log("MONEEEEY");
     }
 
     IEnumerator DialougePopup()

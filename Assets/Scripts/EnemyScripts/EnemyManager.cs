@@ -8,7 +8,6 @@ public class EnemyManager : MonoBehaviour
     public void EnemyDied()
     {
         numberOfEnemies--;
-        Debug.Log(numberOfEnemies);
         if (numberOfEnemies <= 0)
         {
             objectiveUI.Objective1Completed();

@@ -12,6 +12,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] GameObject muzzleFlash;
     [SerializeField] Transform muzzle;
     [SerializeField] AmmoUI ammoUI;
+    [SerializeField] AudioSource bang;
+    [SerializeField] AudioSource reload;
 
     Vector2 direction;
 
@@ -63,12 +65,8 @@ public class Shooting : MonoBehaviour
 
         if (currentAmmo < 1)
         {
-
             if (storage > 0)
                 StartCoroutine(Reload());
-
-            else
-                Debug.Log("EMPTY");
         }
         else
         {
@@ -79,8 +77,9 @@ public class Shooting : MonoBehaviour
             );
             StartCoroutine(ShowMuzzleFlash());
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
-
+            bang.Play();
             bulletScript.SetDirection(direction);
+
 
             currentAmmo--;
             ammoUI.UpdateAmmo();
@@ -100,6 +99,7 @@ public class Shooting : MonoBehaviour
         isReloading = true;
         ammoUI.reloading.SetActive(true);
         yield return new WaitForSeconds(reloadTime);
+        reload.Play();
 
         int bulletsToReload = Mathf.Min(storage, magazine);
 

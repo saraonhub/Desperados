@@ -9,7 +9,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform enemyMuzzele;
     [SerializeField] GameObject enemyBullet;
     [SerializeField] GameObject enemyMuzzleFlash;
-
+    [SerializeField] AudioSource bang;
+    [SerializeField] AudioSource reload;
     [SerializeField] float shootDelay;
     [SerializeField] float startDelay;
     void Start()
@@ -43,6 +44,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator ShootRoutine()
     {
         yield return new WaitForSeconds(startDelay);
+        reload.Play();
 
         while (true)
         {
@@ -64,7 +66,7 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(ShowMuzzleFlash());
 
         Bullet bulletScript = newBullet.GetComponent<Bullet>();
-
+        bang.Play();
         bulletScript.SetDirection(direction);
     }
 

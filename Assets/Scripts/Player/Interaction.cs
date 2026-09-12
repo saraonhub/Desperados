@@ -27,11 +27,8 @@ public class Interaction : MonoBehaviour
 
     void OnKeyTriggered(InputAction.CallbackContext context)
     {
-        Debug.Log("CLICKED E");
-
         if (currentInteractable != null)
         {
-            Debug.Log("INTERACTED WITH: " + currentInteractable);
             currentInteractable.Interact();
         }
     }

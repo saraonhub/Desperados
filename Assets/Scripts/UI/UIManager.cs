@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI seceretsFoundText;
     [SerializeField] GameObject failed;
     [SerializeField] PlayerInput playerInput;
-
-
+    [SerializeField] AudioSource buttonSound;
 
     void Awake()
     {
@@ -30,39 +30,21 @@ public class UIManager : MonoBehaviour
     {
         completed.SetActive(true);
         seceretsFoundText.text = GameManager.Instance.GetSecertsFound().ToString() + "/3";
-        GameManager.Instance.EndGameplay();
+        StartCoroutine(GameManager.Instance.EndGameplay());
     }
     public void FailedScreen()
     {
         failed.SetActive(true);
         ActivateUIMap();
-
     }
-
-    public void OnClickQuit()
-    {
-        GameManager.Instance.QuitGame();
-    }
-
-    public void OnClickReload()
-    {
-        Debug.Log("RELOAD");
-
-        GameManager.Instance.ReloadGame();
-    }
-
     public void ActivateUIMap()
     {
         playerInput.SwitchCurrentActionMap("UI");
-        Debug.Log("UI MAP");
-
     }
 
     public void DeactivateUIMap()
     {
         playerInput.SwitchCurrentActionMap("Movement");
-        Debug.Log("MOVEMENT MAP");
-
     }
 
     public void SecretOpen(Animator popup)
@@ -73,10 +55,16 @@ public class UIManager : MonoBehaviour
 
     public void SecretClose(Animator popup)
     {
+        buttonSound.Play();
         popup.SetTrigger("Close");
         DeactivateUIMap();
     }
-
+    public void DeactivatePopup(GameObject popup)
+    {
+        popup.SetActive(false);
+        GameManager.Instance.ResumeGame();
+        playerInput.SwitchCurrentActionMap("Movement");
+    }
 
 }
 

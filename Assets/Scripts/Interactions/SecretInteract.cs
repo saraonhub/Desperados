@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class SecretInteract : MonoBehaviour, IInteractable
     [SerializeField] ObjectiveUI objectiveUI;
     [SerializeField] GameObject dialogue;
     [SerializeField] Animator secretUIPopup;
+    [SerializeField] TextMeshProUGUI dialougeText;
+    [SerializeField] string text;
     bool pickedup;
 
 
@@ -33,6 +36,7 @@ public class SecretInteract : MonoBehaviour, IInteractable
         GameManager.Instance.SecretFound();
         glow.SetActive(false);
         UIManager.Instance.SecretOpen(secretUIPopup);
+        StartCoroutine(CommentPopup());
     }
     void IInteractable.Highlight()
     {
@@ -46,5 +50,16 @@ public class SecretInteract : MonoBehaviour, IInteractable
     {
         yield return new WaitForSeconds(2.35f);
         dialogue.SetActive(false);
+    }
+
+    IEnumerator CommentPopup()
+    {
+        yield return new WaitForSeconds(3f);
+        dialogue.SetActive(true);
+        dialougeText.text = text;
+        yield return new WaitForSeconds(4f);
+        dialogue.SetActive(false);
+
+
     }
 }
